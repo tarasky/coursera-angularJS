@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstModule">
 	<head>
 		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
 		<title>Hello Coursera</title>
 	</head>
 	<body>
-		<h1>Hello Coursera!!</h1>
+		<div ng-controller="TestController">
+			{{name}}
+		</div>
 	</body>
 </html>
