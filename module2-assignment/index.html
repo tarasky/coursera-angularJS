@@ -7,14 +7,14 @@
 		<title></title>
 	</head>
 	<body>
-		
+		<h1>Shopping List Check Off</h1>
 		<h4>To Buy</h4>
 		<div ng-controller="ToBuyController as toBuy">
 			<div ng-if="!toBuy.items.length">Everything is bought!</div>
 			<ul>
 				<li ng-repeat="item in toBuy.items">
 					Buy {{item.quantity}} {{item.name}}
-					<button ng-click="toBuy.moveIt($index)">Bought</button>
+					<button ng-click="toBuy.moveIt($index)">Bought</button><br/><br/>
 				</li>
 			</ul>
 		</div>
