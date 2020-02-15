@@ -35,6 +35,12 @@
 			MenuSearchService.removalOfItem(itemIndex);
 		}
 		
+		narrowCtrl.isError = function(){
+			if(narrowCtrl.isClick && !narrowCtrl.found.length){
+				return true;
+			}
+			return false;
+		}
 	}
 	
 	MenuSearchService.$inject = ['$http'];
