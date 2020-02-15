@@ -11,10 +11,11 @@
 				list : '<getList',
 				remove : '&removeItem'
 			},
-			templateUrl : "list.html",
-			controller : "NarrowItDownController",
-			controllerAs: 'dirCtrl',
-			bindToController: true
+			templateUrl : "list.html"
+			//templateUrl : "list.html",
+			//controller : "NarrowItDownController",
+			//controllerAs: 'dirCtrl',
+			//bindToController: true
 		};
 		return ddo;
 	}
@@ -35,12 +36,12 @@
 			MenuSearchService.removalOfItem(itemIndex);
 		}
 		
-		narrowCtrl.isError = function(){
+		/*narrowCtrl.isError = function(){
 			if(!narrowCtrl.found.length){
 				return true;
 			}
 			return false;
-		}
+		}*/
 	}
 	
 	MenuSearchService.$inject = ['$http'];

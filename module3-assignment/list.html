@@ -1,7 +1,7 @@
 <ul>
-	<li ng-repeat="items in dirCtrl.list">
-		{{items.name}}, {{items.short_name}}, {{items.description}} <button ng-click="dirCtrl.remove({index : $index})">Don't want this one!</button>
+	<li ng-repeat="items in list">
+		{{items.name}}, {{items.short_name}}, {{items.description}} <button ng-click="remove({index : $index})">Don't want this one!</button>
 		<br /><br />
 	</li>
 </ul>
-<div ng-if="dirCtrl.isError()">Nothing found</div>
+<!--<div ng-if="dirCtrl.isError()">Nothing found</div>-->
