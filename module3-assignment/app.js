@@ -11,8 +11,8 @@
 				list : '<getList',
 				remove : '&removeItem'
 			},
-			templateUrl : "list.html",
-			controller : "ItemsDirectiveController",
+			templateUrl : 'list.html',
+			controller : ItemsDirectiveController,
 			controllerAs: 'dirCtrl',
 			bindToController: true
 		};
