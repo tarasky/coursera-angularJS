@@ -8,7 +8,7 @@
 	function FoundItemsDirective(){
 		var ddo = {
 			scope : {
-				list : '<getList'
+				list : '<getList',
 				remove : '&removeItem'
 			},
 			templateUrl : "list.html",
