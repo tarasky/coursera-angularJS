@@ -55,8 +55,8 @@
 			})
 		}
 		
-		menuSvc.removalOfItem = function(itemIndex){
-			foundItems.splice(itemIndex, 1);
+		menuSvc.removalOfItem = function(itemOfIndex){
+			foundItems.splice(itemOfIndex, 1);
 		}
 		
 		menuSvc.getReqdItems = function(){
