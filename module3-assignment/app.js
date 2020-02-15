@@ -9,8 +9,12 @@
 		var ddo = {
 			scope : {
 				list : '<getList'
+				//remove : '&removeItem'
 			},
-			templateUrl : "list.html"
+			templateUrl : "list.html",
+			controller : "NarrowItDownController",
+			controllerAs: 'dirCtrl',
+			bindToController: true
 		};
 		return ddo;
 	}
