@@ -21,7 +21,7 @@
 	
 	function ItemsDirectiveController(){
 		var dirCtrl = this;
-		
+		console.log(dirCtrl.list.length);
 		dirCtrl.isEmpty = function(){
 			if(!dirCtrl.list.length){
 				return true;
