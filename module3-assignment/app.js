@@ -55,12 +55,12 @@
 			})
 		}
 		
-		menuSvc.getReqdItems = function(){
-			return foundItems;
-		}
-		
 		menuSvc.removalOfItem = function(indexOfItem){
 			foundItems.splice(itemIndex, 1);
+		}
+		
+		menuSvc.getReqdItems = function(){
+			return foundItems;
 		}
 		
 	}
