@@ -9,7 +9,7 @@
 		var ddo = {
 			scope : {
 				list : '<getList'
-				//remove : '&removeItem'
+				remove : '&removeItem'
 			},
 			templateUrl : "list.html",
 			controller : "NarrowItDownController",
@@ -29,6 +29,10 @@
 		};
 		
 		narrowCtrl.found = MenuSearchService.getReqdItems();
+		
+		narrowCtrl.removeAs = function(itemIndex){
+			MenuSearchService.removalOfItem(itemIndex);
+		}
 	}
 	
 	MenuSearchService.$inject = ['$http'];
@@ -53,6 +57,10 @@
 		
 		menuSvc.getReqdItems = function(){
 			return foundItems;
+		}
+		
+		menuSvc.removalOfItem = function(indexOfItem){
+			foundItems.splice(itemIndex, 1);
 		}
 		
 	}
