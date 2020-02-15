@@ -36,9 +36,7 @@
 		}
 		
 		narrowCtrl.isError = function(){
-			//if(narrowCtrl.isClick && !narrowCtrl.found.length){
-				//return true;
-			//}
+			
 			return false;
 		}
 	}
