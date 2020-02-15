@@ -7,11 +7,11 @@
 	
 	function FoundItemsDirective(){
 		var ddo = {
+			templateUrl : 'list.html',
 			scope : {
 				list : '<getList',
 				remove : '&removeItem'
 			},
-			templateUrl : 'list.html',
 			controller : ItemsDirectiveController,
 			controllerAs: 'dirCtrl',
 			bindToController: true
