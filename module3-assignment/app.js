@@ -31,7 +31,7 @@
 		narrowCtrl.found = MenuSearchService.getReqdItems();
 		
 		narrowCtrl.removeAs = function(itemIndex){
-			MenuSearchService.removalOfItem(itemIndex);
+			MenuSearchService.removeAs(itemIndex);
 		}
 	}
 	
@@ -55,7 +55,7 @@
 			})
 		}
 		
-		menuSvc.removalOfItem = function(itemIndex){
+		menuSvc.removeAs = function(itemIndex){
 			foundItems.splice(itemIndex, 1);
 		}
 		
