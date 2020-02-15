@@ -3,9 +3,9 @@
 	angular.module('NarrowItDownApp', [])
 	.controller('NarrowItDownController', NarrowItDownController)
 	.service('MenuSearchService', MenuSearchService)
-	.directive('foundItems', ListItemsDirective);
+	.directive('foundItems', FoundItemsDirective);
 	
-	function ListItemsDirective(){
+	function FoundItemsDirective(){
 		var ddo = {
 			scope : {
 				listSelected : '=getList'
