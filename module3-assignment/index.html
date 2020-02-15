@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<title></title>
+	</head>
+	<body ng-controller='NarrowItDownController as narrow'>
+		<div>
+			<input type="text" ng-model="narrow.searchDesc">
+			<button ng-click="narrow.getMenuItems()">Narrow It Down For Me!</button>
+		
+			<found-items getList="narrow"></found-items>
+			
+			
+			
+		</div>
+	</body>
+
+</html>
