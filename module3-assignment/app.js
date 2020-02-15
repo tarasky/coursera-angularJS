@@ -23,15 +23,23 @@
 	function NarrowItDownController(MenuSearchService){
 		var narrowCtrl = this;
 		
-		//narrowCtrl.isClick = false;
+		narrowCtrl.isClick = false;
 		narrowCtrl.getMenuItems = function(){
 			MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+			narrowCtrl.isClick = true;
 		};
 		
 		narrowCtrl.found = MenuSearchService.getReqdItems();
 		
 		narrowCtrl.removeAs = function(itemIndex){
 			MenuSearchService.removalOfItem(itemIndex);
+		}
+		
+		narrowCtrl.isError = function(){
+			if(narrow.isClick && !narrow.found.length){
+				return true;
+			}
+			return false;
 		}
 	}
 	
