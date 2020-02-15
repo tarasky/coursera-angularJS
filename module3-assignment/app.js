@@ -20,10 +20,10 @@
 	}
 	
 	function ItemsDirectiveController(){
-		var itemsCtrl = this;
+		var dirCtrl = this;
 		
-		itemsCtrl.isEmpty = function(){
-			if(!itemsCtrl.list.length){
+		dirCtrl.isEmpty = function(){
+			if(!dirCtrl.list.length){
 				return true;
 			}
 			
