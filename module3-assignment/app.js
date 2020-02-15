@@ -8,7 +8,7 @@
 	function FoundItemsDirective(){
 		var ddo = {
 			scope : {
-				listSelected : '=getList'
+				list : '=getList'
 			},
 			templateUrl : "list.html"
 		};
@@ -23,7 +23,7 @@
 		narrowCtrl.getMenuItems = function(){
 			MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
 		};
-		
+		console.log(narrowCtrl.found);
 		narrowCtrl.found = MenuSearchService.getReqdItems();
 	}
 	
