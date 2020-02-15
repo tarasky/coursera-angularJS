@@ -36,7 +36,7 @@
 		}
 		
 		narrowCtrl.isError = function(){
-			if(narrow.isClick && !narrow.found.length){
+			if(narrowCtrl.isClick && !narrowCtrl.found.length){
 				return true;
 			}
 			return false;
