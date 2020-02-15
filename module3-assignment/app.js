@@ -55,7 +55,7 @@
 			})
 		}
 		
-		menuSvc.removalOfItem = function(indexOfItem){
+		menuSvc.removalOfItem = function(itemIndex){
 			foundItems.splice(itemIndex, 1);
 		}
 		
