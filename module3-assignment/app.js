@@ -38,10 +38,12 @@
 		
 		narrowCtrl.found = '';
 		
-		narrowCtrl.isClick = false;
 		narrowCtrl.getMenuItems = function(){
-			MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
-			narrowCtrl.isClick = true;
+			try {
+				  MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+			} catch (error) {
+			  narrowCtrl.errorMessage = error.message;
+			}
 		};
 		
 		narrowCtrl.found = MenuSearchService.getReqdItems();
@@ -58,17 +60,22 @@
 		var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
-			$http({
-				url : "https://davids-restaurant.herokuapp.com/menu_items.json",
-				method : "GET"
-			})
-			.then(function(response){
-				angular.forEach(response.data.menu_items, function(value, key){
-					if(value.description.indexOf(searchTerm) != -1){
-						foundItems.push(value);
-					}
-				});
-			})
+			if(searchTerm !== undefined){
+				$http({
+					url : "https://davids-restaurant.herokuapp.com/menu_items.json",
+					method : "GET"
+				})
+				.then(function(response){
+					angular.forEach(response.data.menu_items, function(value, key){
+						if(value.description.indexOf(searchTerm) != -1){
+							foundItems.push(value);
+						}
+					});
+				})
+			}else{
+				throw new Error("Nothing found");
+			}
+			
 		}
 		
 		menuSvc.removalOfItem = function(itemOfIndex){

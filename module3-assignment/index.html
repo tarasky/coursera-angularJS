@@ -10,6 +10,7 @@
 		<div>
 			<input type="text" ng-model="narrow.searchDesc">
 			<button ng-click="narrow.getMenuItems()">Narrow It Down For Me!</button>
+			<div ng-if="narrow.errorMessage">{{narrow.errorMessage}}</div>
 			<found-items get-list="narrow.found" remove-item="narrow.removeAs(index)"></found-items>
 			<!--<ul>
 				<li ng-repeat="items in narrow.found">
