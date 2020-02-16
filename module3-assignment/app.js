@@ -19,7 +19,7 @@
 		return ddo;
 	}
 	
-	function ItemsDirectiveController(){
+	/*function ItemsDirectiveController(){
 		var dirCtrl = this;
 		
 		dirCtrl.isEmpty = function(){
@@ -30,13 +30,13 @@
 			return false;
 		}
 		
-	}
+	}*/
 	
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
 		var narrowCtrl = this;
 		
-		narrowCtrl.found = '';
+		//narrowCtrl.found = '';
 		
 		narrowCtrl.getMenuItems = function(){
 			try {
@@ -60,6 +60,7 @@
 		var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
+			console.log(searchTerm);
 			if(searchTerm !== undefined){
 				$http({
 					url : "https://davids-restaurant.herokuapp.com/menu_items.json",
