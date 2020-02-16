@@ -1,6 +1,8 @@
 <ul>
-	<li ng-repeat="items in dirCtrl.list">
-		{{items.name}}, {{items.short_name}}, {{items.description}} <button ng-click="dirCtrl.remove({index : $index})">Don't want this one!</button>
+	<!--<li ng-repeat="items in dirCtrl.list">-->
+	<li ng-repeat="items in list.found">
+		<!--{{items.name}}, {{items.short_name}}, {{items.description}} <button ng-click="dirCtrl.remove({index : $index})">Don't want this one!</button>-->
+		{{items.name}}, {{items.short_name}}, {{items.description}} <button ng-click="remove({index : $index})">Don't want this one!</button>
 		<br /><br />
 	</li>
 </ul>

@@ -11,15 +11,16 @@
 			scope : {
 				list : '<getList',
 				remove : '&removeItem'
-			},
+			}
+			/*},
 			controller : ItemsDirectiveController,
 			controllerAs: 'dirCtrl',
-			bindToController: true
+			bindToController: true*/
 		};
 		return ddo;
 	}
 	
-	function ItemsDirectiveController(){
+	/*function ItemsDirectiveController(){
 		var dirCtrl = this;
 		
 		dirCtrl.isEmpty = function(){
@@ -30,7 +31,7 @@
 			return false;
 		}
 		
-	}
+	}*/
 	
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
@@ -72,7 +73,7 @@
 					});
 				})
 			}else{
-				throw new Error("Nothing foundd");
+				throw new Error("Nothing found");
 			}
 			
 		}
