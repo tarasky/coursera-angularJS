@@ -41,21 +41,15 @@
 			}
 		};
 		
-		//narrowCtrl.found = MenuSearchService.getReqdItems();
-		
 		narrowCtrl.removeAs = function(itemIndex){
 			narrowCtrl.found.splice(itemIndex, 1);
-			//MenuSearchService.removalOfItem(itemIndex);
 		}
-		
 		
 	}
 	
 	MenuSearchService.$inject = ['$http'];
 	function MenuSearchService($http){
 		var menuSvc = this;
-		
-		//var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
 			if(searchTerm !== undefined && searchTerm !== '' && searchTerm !== null){
@@ -77,14 +71,6 @@
 				throw new Error("Nothing found");
 			}
 		}
-		
-		/*menuSvc.removalOfItem = function(itemOfIndex){
-			return foundItems.splice(itemOfIndex, 1);
-		}*/
-		
-		/*menuSvc.getReqdItems = function(){
-			return foundItems;
-		}*/
 		
 	}
 	
