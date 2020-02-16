@@ -22,12 +22,17 @@
 		var narrowCtrl = this;
 		
 		narrowCtrl.getMenuItems = function(){
-			try {
-				narrowCtrl.found = MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+			//try {
+				var promise = MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+				
+				promise.then(function (result) {
+					narrowCtrl.found = result;
+					console.log(result);
+				})
 				//console.log(narrowCtrl.found);
-			} catch (error) {
-				narrowCtrl.errorMessage = error.message;
-			}
+			//} catch (error) {
+				//narrowCtrl.errorMessage = error.message;
+			//}
 		};
 		
 		//narrowCtrl.found = MenuSearchService.getReqdItems();
