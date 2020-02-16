@@ -28,6 +28,7 @@
 				promise.then(function (result) {
 					if(!result.length){
 						narrowCtrl.errorMessage = "Nothing found";
+						narrowCtrl.found = '';
 					}else{
 						narrowCtrl.found = result;
 						narrowCtrl.errorMessage = '';
@@ -36,6 +37,7 @@
 				})
 			} catch (error) {
 				narrowCtrl.errorMessage = error.message;
+				narrowCtrl.found = '';
 			}
 		};
 		
