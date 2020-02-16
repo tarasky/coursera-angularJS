@@ -46,7 +46,7 @@
 			
 			if(searchTerm !== undefined && searchTerm !== '' && searchTerm !== null){
 				
-				$http({
+				return $http({
 					url : "https://davids-restaurant.herokuapp.com/menu_items.json",
 					method : "GET"
 				})
