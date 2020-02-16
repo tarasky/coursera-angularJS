@@ -59,7 +59,7 @@
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
 			console.log(searchTerm);
-			if(searchTerm !== undefined){
+			if(searchTerm !== undefined || searchTerm == ''){
 				$http({
 					url : "https://davids-restaurant.herokuapp.com/menu_items.json",
 					method : "GET"
