@@ -19,7 +19,7 @@
 		return ddo;
 	}
 	
-	/*function ItemsDirectiveController(){
+	function ItemsDirectiveController(){
 		var dirCtrl = this;
 		
 		dirCtrl.isEmpty = function(){
@@ -30,7 +30,7 @@
 			return false;
 		}
 		
-	}*/
+	}
 	
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
