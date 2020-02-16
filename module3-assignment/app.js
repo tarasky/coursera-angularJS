@@ -31,7 +31,7 @@
 		
 		narrowCtrl.found = MenuSearchService.getReqdItems();
 		
-		if(narrowCtrl.found.length || narrowCtrl.errorMessage){
+		if(!narrowCtrl.found.length || narrowCtrl.errorMessage){
 			narrowCtrl.realError = "ERROR!!!!!";
 		}
 		
