@@ -60,7 +60,6 @@
 			}else{
 				throw new Error("Nothing found");
 			}
-			console.log(foundItems);
 		}
 		
 		menuSvc.removalOfItem = function(itemOfIndex){
@@ -68,6 +67,7 @@
 		}
 		
 		menuSvc.getReqdItems = function(){
+			console.log(foundItems);
 			return foundItems;
 		}
 		
