@@ -50,10 +50,11 @@
 					url : "https://davids-restaurant.herokuapp.com/menu_items.json",
 					method : "GET"
 				})
-				.then(function(response){console.log(response.data);
+				.then(function(response){
 					var foundItems = [];
 					angular.forEach(response.data.menu_items, function(value, key){
 						if(value.description.indexOf(searchTerm) != -1){
+							console.log(value);
 							foundItems.push(value);
 						}
 					});
