@@ -43,7 +43,6 @@
 		//var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
-			//console.log(searchTerm);
 			if(searchTerm !== undefined && searchTerm !== '' && searchTerm !== null){
 				
 				$http({
@@ -54,11 +53,10 @@
 					var foundItems = [];
 					angular.forEach(response.data.menu_items, function(value, key){
 						if(value.description.indexOf(searchTerm) != -1){
-							console.log(value);
 							foundItems.push(value);
 						}
 					});
-					//console.log(foundItems);
+					console.log(foundItems);
 					return foundItems;
 				})
 			}else{
