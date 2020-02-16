@@ -30,11 +30,9 @@
 						narrowCtrl.errorMessage = "Nothing found";
 					}else{
 						narrowCtrl.found = result;
+						narrowCtrl.errorMessage = '';
 						console.log(result);
 					}
-				})
-				.catch(function (error) {
-					console.log(error.message);
 				})
 			} catch (error) {
 				narrowCtrl.errorMessage = error.message;
@@ -44,8 +42,11 @@
 		//narrowCtrl.found = MenuSearchService.getReqdItems();
 		
 		narrowCtrl.removeAs = function(itemIndex){
-			MenuSearchService.removalOfItem(itemIndex);
+			narrowCtrl.found.splice(itemIndex, 1);
+			//MenuSearchService.removalOfItem(itemIndex);
 		}
+		
+		
 	}
 	
 	MenuSearchService.$inject = ['$http'];
@@ -75,9 +76,9 @@
 			}
 		}
 		
-		menuSvc.removalOfItem = function(itemOfIndex){
+		/*menuSvc.removalOfItem = function(itemOfIndex){
 			return foundItems.splice(itemOfIndex, 1);
-		}
+		}*/
 		
 		/*menuSvc.getReqdItems = function(){
 			return foundItems;
