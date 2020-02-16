@@ -40,7 +40,7 @@
 	function MenuSearchService($http){
 		var menuSvc = this;
 		
-		var foundItems = [];
+		//var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
 			
@@ -51,11 +51,13 @@
 					method : "GET"
 				})
 				.then(function(response){
+					var foundItems = [];
 					angular.forEach(response.data.menu_items, function(value, key){
 						if(value.description.indexOf(searchTerm) != -1){
 							foundItems.push(value);
 						}
 					});
+					return foundItems;
 				})
 			}else{
 				throw new Error("Nothing found");
