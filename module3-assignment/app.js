@@ -23,9 +23,9 @@
 		
 		narrowCtrl.getMenuItems = function(){
 			try {
-				  MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+				MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
 			} catch (error) {
-			  narrowCtrl.errorMessage = error.message;
+				narrowCtrl.errorMessage = error.message;
 			}
 		};
 		
