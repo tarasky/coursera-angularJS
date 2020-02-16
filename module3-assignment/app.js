@@ -27,18 +27,17 @@
 				
 				promise.then(function (result) {
 					if(!result.length){
-						console.log("ERROR!!");
+						narrowCtrl.errorMessage = "Nothing found";
 					}else{
 						narrowCtrl.found = result;
 						console.log(result);
 					}
 				})
-				//.catch(function (error) {
-				//	console.log(error.message);
-				//})
+				.catch(function (error) {
+					console.log(error.message);
+				})
 			} catch (error) {
-				console.log(error.message);
-				//narrowCtrl.errorMessage = error.message;
+				narrowCtrl.errorMessage = error.message;
 			}
 		};
 		
