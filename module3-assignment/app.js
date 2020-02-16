@@ -24,6 +24,7 @@
 		narrowCtrl.getMenuItems = function(){
 			try {
 				narrowCtrl.found = MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+				console.log(narrowCtrl.found);
 			} catch (error) {
 				narrowCtrl.errorMessage = error.message;
 			}
@@ -56,7 +57,6 @@
 							foundItems.push(value);
 						}
 					});
-					console.log(foundItems);
 					return foundItems;
 				})
 			}else{
