@@ -53,7 +53,7 @@
 				.then(function(response){
 					angular.forEach(response.data.menu_items, function(value, key){
 						if(value.description.indexOf(searchTerm) != -1){
-							return foundItems.push(value);
+							foundItems.push(value);
 						}
 					});
 				})
