@@ -22,19 +22,24 @@
 		var narrowCtrl = this;
 		
 		narrowCtrl.getMenuItems = function(){
-			//try {
+			try {
 				var promise = MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
 				
 				promise.then(function (result) {
-					narrowCtrl.found = result;
-					console.log(result);
+					if(!result.length){
+						console.log("ERROR!!");
+					}else{
+						narrowCtrl.found = result;
+						console.log(result);
+					}
 				})
-				.catch(function (error) {
-					console.log(error.message);
-				})
-			//} catch (error) {
+				//.catch(function (error) {
+				//	console.log(error.message);
+				//})
+			} catch (error) {
+				console.log(error.message);
 				//narrowCtrl.errorMessage = error.message;
-			//}
+			}
 		};
 		
 		//narrowCtrl.found = MenuSearchService.getReqdItems();
