@@ -21,7 +21,7 @@
 	
 	function ItemsDirectiveController(){
 		var dirCtrl = this;
-		console.log(dirCtrl.list.length);
+		
 		dirCtrl.isEmpty = function(){
 			if(!dirCtrl.list.length){
 				return true;
@@ -35,6 +35,8 @@
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
 		var narrowCtrl = this;
+		
+		narrowCtrl.found = '';
 		
 		narrowCtrl.isClick = false;
 		narrowCtrl.getMenuItems = function(){
