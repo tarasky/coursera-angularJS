@@ -29,7 +29,9 @@
 					narrowCtrl.found = result;
 					console.log(result);
 				})
-				//console.log(narrowCtrl.found);
+				.catch(function (error) {
+					console.log(error.message);
+				})
 			//} catch (error) {
 				//narrowCtrl.errorMessage = error.message;
 			//}
