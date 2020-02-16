@@ -12,26 +12,10 @@
 				list : '<getList',
 				remove : '&removeItem'
 			}
-			/*},
-			controller : ItemsDirectiveController,
-			controllerAs: 'dirCtrl',
-			bindToController: true*/
+			
 		};
 		return ddo;
 	}
-	
-	/*function ItemsDirectiveController(){
-		var dirCtrl = this;
-		
-		dirCtrl.isEmpty = function(){
-			//if(!dirCtrl.list.length){
-			//	return true;
-			//}
-			
-			return false;
-		}
-		
-	}*/
 	
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService){
