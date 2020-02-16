@@ -53,7 +53,7 @@
 				.then(function(response){
 					angular.forEach(response.data.menu_items, function(value, key){
 						if(value.description.indexOf(searchTerm) != -1){
-							foundItems.push(value);
+							return foundItems.push(value);
 						}
 					});
 				})
@@ -63,7 +63,7 @@
 		}
 		
 		menuSvc.removalOfItem = function(itemOfIndex){
-			foundItems.splice(itemOfIndex, 1);
+			return foundItems.splice(itemOfIndex, 1);
 		}
 		
 		menuSvc.getReqdItems = function(){
