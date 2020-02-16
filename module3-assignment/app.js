@@ -17,13 +17,14 @@
 		return ddo;
 	}
 	
-	NarrowItDownController.$inject = ['MenuSearchService'];
-	function NarrowItDownController(MenuSearchService){
+	NarrowItDownController.$inject = ['MenuSearchService', $route];
+	function NarrowItDownController(MenuSearchService, $route){
 		var narrowCtrl = this;
 		
 		narrowCtrl.getMenuItems = function(){
 			try {
 				  MenuSearchService.getMatchedMenuItems(narrowCtrl.searchDesc);
+				  $route.reload();
 			} catch (error) {
 			  narrowCtrl.errorMessage = error.message;
 			}
