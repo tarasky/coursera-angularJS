@@ -9,7 +9,7 @@
 		var ddo = {
 			templateUrl : 'list.html',
 			scope : {
-				list : '<getList',
+				list : '=getList',
 				remove : '&removeItem'
 			}
 			
