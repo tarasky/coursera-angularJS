@@ -43,7 +43,7 @@
 		//var foundItems = [];
 		
 		menuSvc.getMatchedMenuItems = function(searchTerm){
-			console.log(searchTerm);
+			//console.log(searchTerm);
 			if(searchTerm !== undefined && searchTerm !== '' && searchTerm !== null){
 				
 				$http({
@@ -57,6 +57,7 @@
 							foundItems.push(value);
 						}
 					});
+					console.log(foundItems);
 					return foundItems;
 				})
 			}else{
