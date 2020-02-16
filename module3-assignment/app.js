@@ -31,6 +31,10 @@
 		
 		narrowCtrl.found = MenuSearchService.getReqdItems();
 		
+		if(narrowCtrl.found.length || narrowCtrl.errorMessage){
+			narrowCtrl.realError = "ERROR!!!!!";
+		}
+		
 		narrowCtrl.removeAs = function(itemIndex){
 			MenuSearchService.removalOfItem(itemIndex);
 		}
