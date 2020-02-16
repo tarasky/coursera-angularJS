@@ -23,9 +23,9 @@
 		var dirCtrl = this;
 		
 		dirCtrl.isEmpty = function(){
-			if(!dirCtrl.list.length){
-				return true;
-			}
+			//if(!dirCtrl.list.length){
+			//	return true;
+			//}
 			
 			return false;
 		}
