@@ -1,6 +1,6 @@
 (function(){
 
-angular.module('data')
+angular.module('MenuApp')
 .controller('CategoriesController', CategoriesController);
 
 CategoriesController.$inject = ['MenuDataService', 'categories'];

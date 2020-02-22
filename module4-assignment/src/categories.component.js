@@ -1,6 +1,6 @@
 (function(){
 
-angular.module('data')
+angular.module('MenuApp')
 .component('categories', {
 	templateUrl : 'src/categories.component.template.html',
 	bindings: {
