@@ -13,7 +13,7 @@
 		.state('home', {
 			url : '/',
 			templateUrl : 'src/home.html'
-		})
+		});
 		.state('categories', {
 			url : '/categories',
 			templateUrl : 'src/categories.html',

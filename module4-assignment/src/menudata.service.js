@@ -3,7 +3,7 @@
 angular.module('MenuApp')
 .service('MenuDataService', MenuDataService);
 
-	MenuDataService.$inject = ['$http']
+	MenuDataService.$inject = ['$http'];
 	function MenuDataService($http){
 		
 		var svc = this;
@@ -17,7 +17,7 @@ angular.module('MenuApp')
 			return response;
 		};
 		
-		svc.getItemsForCategory = function(categoryShortName){
+		/*svc.getItemsForCategory = function(categoryShortName){
 			var response = $http({
 				method: "GET",
 				url: ("https://davids-restaurant.herokuapp.com/menu_items.json"),
@@ -27,7 +27,7 @@ angular.module('MenuApp')
 			});
 
 			return response;
-		};
+		};*/
 		
 	}
 
