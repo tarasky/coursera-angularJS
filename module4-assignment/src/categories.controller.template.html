@@ -1,4 +1,9 @@
 <a ui-sref="home">Home</a>
 
 <h3>Our Choices of Categories</h3>
-<me-categories catss="myCategories.category"></me-categories>
+<!--<me-categories catss="myCategories.category"></me-categories>-->
+<ul>
+	<li ng-repeat="cat in catCtrl.category">
+		{{ cat.id }}, {{ cat.short_name }}, {{ cat.name }}, {{ cat.special_instructions }}
+	</li>
+</ul>
