@@ -5,9 +5,9 @@ angular.module('MenuApp')
 
 CategoriesController.$inject = ['allcategories'];
 function CategoriesController(allcategories){
-	var myCategories = this;
+	var catCtrl = this;
 	
-	myCategories.category = allcategories;
+	catCtrl.category = allcategories;
 }
 
 })();
