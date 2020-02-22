@@ -1,6 +1,15 @@
 <h3>Items in This Category</h3>
 <ul>
 	<li ng-repeat="itemo in $ctrl.itemss">
-		{{ itemo.id }}, {{ itemo.short_name }}, {{ itemo.name }}, {{ itemo.description }}, {{ itemo.price_small }}, {{ itemo.price_large }}, {{ itemo.small_portion_name }},  {{ itemo.large_portion_name }}
+		<ul>
+			<li>ID : {{ itemo.id }}</li>
+			<li>Short Name : {{ itemo.short_name }}</li>
+			<li>Name : {{ itemo.name }}</li>
+			<li>Description : {{ itemo.description }}</li>
+			<li>Price of a small portion : {{ itemo.price_small }}</li>
+			<li>Price of a large portion : {{ itemo.price_large }}</li>
+			<li>Name of small portion : {{ itemo.small_portion_name }}</li>
+			<li>Nsme of large portion : {{ itemo.large_portion_name }}</li>
+		</ul>
 	</li>
 </ul>
