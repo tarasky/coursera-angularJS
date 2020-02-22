@@ -34,7 +34,7 @@
 			controller : 'ItemsController as itemCtrl',
 			resolve : {
 				allitems : ['$stateParams', 'MenuDataService', function(MenuDataService, $stateParams){
-					return MenuDataService.getItemsForCategory[$stateParams.shortName]
+					return MenuDataService.getItemsForCategory($stateParams.shortName)
 					.then(function(response){
 						return response.data;
 					});	
