@@ -28,17 +28,20 @@
 			}
 			
 		});
-		/*.state('items', {
-			url : '/items',
-			templateUrl : 'items.html',
+		.state('items', {
+			url : '/items/{shortName}',
+			templateUrl : 'src/items.controller.template.html',
 			controller : 'ItemsController as itemCtrl',
 			resolve : {
-				categories : ['MenuDataService', function(MenuDataService){
-					return MenuDataService.getItemsForCategory();
+				allitems : ['$stateParams', 'MenuDataService', function(MenuDataService, $stateParams){
+					return MenuDataService.getItemsForCategory[$stateParams.shortName]
+					.then(function(response){
+						return response.data;
+					});	
 				}]
 			}
 			
-		});*/
+		});
 		
 	}
 	
