@@ -17,7 +17,6 @@ angular.module('data')
 		};
 		
 		svc.getItemsForCategory = function(categoryShortName){
-			console.log(categoryShortName);
 			var response = $http({
 				method: "GET",
 				url: ("https://davids-restaurant.herokuapp.com/menu_items.json"),

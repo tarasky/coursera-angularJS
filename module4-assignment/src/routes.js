@@ -33,7 +33,7 @@
 			templateUrl : 'src/items.controller.template.html',
 			controller : 'ItemsController as itemCtrl',
 			resolve : {
-				allitems : ['$stateParams', 'MenuDataService', function(MenuDataService, $stateParams){
+				allitems : ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService){
 					return MenuDataService.getItemsForCategory($stateParams.shortName)
 					.then(function(response){
 						return response.data;
