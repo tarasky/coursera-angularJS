@@ -13,7 +13,6 @@ angular.module('MenuApp')
 				method: "GET",
 				url: ("https://davids-restaurant.herokuapp.com/categories.json")
 			});
-			console.log(response);
 			return response;
 		};
 		

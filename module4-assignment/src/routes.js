@@ -20,7 +20,10 @@
 			controller : 'CategoriesController as catCtrl',
 			resolve : {
 				allcategories : ['MenuDataService', function(MenuDataService){
-					return MenuDataService.getAllCategories();
+					return MenuDataService.getAllCategories()
+					.then(function(response){
+						return response.data;
+					});					
 				}]
 			}
 			
