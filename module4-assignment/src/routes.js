@@ -27,7 +27,7 @@
 				}]
 			}
 			
-		});
+		})
 		.state('items', {
 			url : '/items/{shortName}',
 			templateUrl : 'src/items.controller.template.html',
