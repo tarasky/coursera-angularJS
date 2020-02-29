@@ -8,7 +8,7 @@ function SignController(MenuService) {
 	var signing = this;
   
 	signing.submit = function () {
-		console.log("hello");
+		console.log(signing.user);
 		
 	};
   
