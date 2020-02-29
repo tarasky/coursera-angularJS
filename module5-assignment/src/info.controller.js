@@ -8,11 +8,13 @@ function InfoController(user) {
 	var info = this;
 	
 	if(!user.length){
-		info.error = "Not Signed Up Yet. Sign up Now!";
+		info.error = true;
 	}else{
 		info.userInfo = user;
 	}
-	console.log(user);
+	
+	console.log(info.error);
+	console.log(info.userInfo);
 }
 
 })();

@@ -1,1 +1,25 @@
-hgkdhld
+<div class="container">
+	<div class="row">
+		<h2>My Choices!!</h2>
+		<div class="col-lg-5">
+		
+			<div ng-if="info.error">
+				Not Signed Up Yet. <a ui-sref="signupform">Sign up Now!</a>
+			</div>
+		
+			<div ng-if="info.userInfo">
+				FirstName : {{info.userInfo.firstname}}
+				<br/><br/>
+				LastName : {{info.userInfo.lastname}}
+				<br/><br/>
+				Email : {{info.userInfo.email}}
+				<br/><br/>
+				Phone : {{info.userInfo.phone}}
+				<br/><br/>
+				Favourite Dish : {{info.userInfo.dish}}
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
