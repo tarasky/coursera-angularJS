@@ -40,7 +40,8 @@ function MenuService($http, ApiPath) {
 	};
 	
 	service.saveInfo = function(userArr, detailsOfDish){
-		myuser = [{firstname: userArr.firstname},{lastname: userArr.lastname},{email: userArr.email},{phone: userArr.phone},{dish: userArr.dish},{dishName: detailsOfDish.name},{dishDesc: detailsOfDish.description}];
+		//myuser = [{firstname: userArr.firstname},{lastname: userArr.lastname},{email: userArr.email},{phone: userArr.phone},{dish: userArr.dish},{dishName: detailsOfDish.name},{dishDesc: detailsOfDish.description}];
+		myuser = [userArr, detailsOfDish];
 	}
 	
 	service.getUser = function(){
