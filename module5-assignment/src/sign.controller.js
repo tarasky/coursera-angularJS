@@ -9,8 +9,11 @@ function SignController(MenuService) {
   
 	signing.submit = function () {
 		
-		var message = MenuService.getDish(signing.user.dish);
-		console.log(message);
+		MenuService.getDish(signing.user.dish)
+		.then(function(response){
+			console.log(response.data);
+		});
+		
 		
 	};
   
