@@ -41,10 +41,10 @@ function routeConfig ($stateProvider) {
         }]
       }
     })
-	.state('signupform', {
+	/*.state('signupform', {
 		url : '/signupform',
 		templateUrl : 'src/signupform.html'
-	});
+	});*/
 }
 })();
 
