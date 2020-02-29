@@ -11,7 +11,7 @@ function SignController(MenuService) {
 		
 		MenuService.getDish(signing.user.dish)
 		.then(function(response){
-			if(!response.length){
+			if(!response.data.length){
 				signing.message = "No such menu number exists";
 			}else{
 				MenuService.saveInfo(signing.user);
