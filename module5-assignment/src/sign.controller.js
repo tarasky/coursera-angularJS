@@ -14,7 +14,7 @@ function SignController(MenuService) {
 			if(!response.length){
 				signing.message = "No such menu number exists";
 			}else{
-				console.log(response.data);
+				MenuService.saveInfo(signing.user);
 				signing.message = "Your information has been saved";
 			}
 		});

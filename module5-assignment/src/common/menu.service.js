@@ -36,6 +36,12 @@ function MenuService($http, ApiPath) {
 
 		return response;
 	};
+	
+	service.saveInfo = function(userArr){
+		
+		console.log(userArr);
+		
+	}
 
 }
 
