@@ -12,9 +12,7 @@ function InfoController(user) {
 	}else{
 		info.userInfo = user;
 	}
-	
-	console.log(info.error);
-	console.log(info.userInfo);
+
 }
 
 })();

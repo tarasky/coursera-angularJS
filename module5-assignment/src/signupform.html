@@ -33,14 +33,14 @@
 				
 				<div class="form-group">
 					<label for="phone">Phone Number</label>
-					<input class="form-control" placeholder="Please enter your phone number" type="text" name="phone"  pattern="(\d{3})-(\d{3})-(\d{4})" ng-model="signing.user.phone">
+					<input class="form-control" placeholder="Please enter your phone number" type="text" name="phone"  pattern="(\d{3})-(\d{3})-(\d{4})" required ng-model="signing.user.phone">
 					<span ng-if="registration.phone.$invalid && registration.phone.$touched">
 						Phone must be in the format ###-###-####.
 					</span>
 				</div>
 				<div class="form-group">
 					<label for="dish">Favourite Dish</label>
-					<input class="form-control" placeholder="Please enter your favourite menu number" type="text" name="dish" ng-model="signing.user.dish">
+					<input class="form-control" placeholder="Please enter your favourite menu number" type="text" name="dish" required ng-model="signing.user.dish">
 				</div>
 				
 				<button ng-disabled="registration.$invalid" class="btn btn-primary" ng-click="signing.submit()">Submit</button>
