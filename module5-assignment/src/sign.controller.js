@@ -18,6 +18,10 @@ function SignController(MenuService) {
 			}else{
 				signing.message = "No such menu number exists";
 			}
+		})
+		.catch(function(error){
+			console.log(error);
+			signing.message = "No such menu number exists";
 		});
 		
 		
