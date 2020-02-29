@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-app="signup">
 	<div class="row">
 		<h2>Sign Up For Our Newsletter Now!!</h2>
 		<div class="col-lg-5">
@@ -6,8 +6,7 @@
 				<div class="form-group">
 					<label for="firstname">First Name</label>
 					<input class="form-control" placeholder="Please enter your first name" type="text" name="firstname" required minlength="1" ng-maxlength="20">
-					<span
-						ng-if="(registration.firstname.$error.minlength || registration.firstname.$error.required) && registration.firstname.$touched">
+					<span ng-if="(registration.firstname.$error.minlength || registration.firstname.$error.required) && registration.firstname.$touched">
 						First Name must be at least 1 character long
 					</span>
 					<span ng-if="registration.firstname.$error.maxlength && registration.firstname.$touched">
@@ -17,8 +16,7 @@
 				<div class="form-group">
 					<label for="lastname">Last Name</label>
 					<input class="form-control" placeholder="Please enter your last name" type="text" name="lastname" required minlength="1" ng-maxlength="20">
-					<span
-						ng-if="(registration.lastname.$error.minlength || registration.lastname.$error.required) && registration.lastname.$touched">
+					<span ng-if="(registration.lastname.$error.minlength || registration.lastname.$error.required) && registration.lastname.$touched">
 						Last Name must be at least 1 character long
 					</span>
 					<span ng-if="registration.lastname.$error.maxlength && registration.lastname.$touched">
