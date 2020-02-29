@@ -1,5 +1,5 @@
 (function() {
 
-angular.module('signup', ['ui.router']);
+angular.module('signup', ['ui.router', 'public']);
 
 })();
