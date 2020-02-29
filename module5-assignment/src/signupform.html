@@ -1,11 +1,11 @@
-<div class="container" ng-app="signup">
+<div class="container" ng-app="public">
 	<div class="row">
 		<h2>Sign Up For Our Newsletter Now!!</h2>
 		<div class="col-lg-5">
-			<form name='registration' novalidate>
+			<form ng-controller="SignController as signing" name='registration' novalidate>
 				<div class="form-group">
 					<label for="firstname">First Name</label>
-					<input class="form-control" placeholder="Please enter your first name" type="text" name="firstname" required minlength="1" ng-maxlength="20">
+					<input class="form-control" placeholder="Please enter your first name" type="text" name="firstname" required minlength="1" ng-maxlength="20" ng-model="signing.firstname">
 					<span ng-if="(registration.firstname.$error.minlength || registration.firstname.$error.required) && registration.firstname.$touched">
 						First Name must be at least 1 character long
 					</span>
@@ -15,7 +15,7 @@
 				</div>
 				<div class="form-group">
 					<label for="lastname">Last Name</label>
-					<input class="form-control" placeholder="Please enter your last name" type="text" name="lastname" required minlength="1" ng-maxlength="20">
+					<input class="form-control" placeholder="Please enter your last name" type="text" name="lastname" required minlength="1" ng-maxlength="20" ng-model="signing.lastname">
 					<span ng-if="(registration.lastname.$error.minlength || registration.lastname.$error.required) && registration.lastname.$touched">
 						Last Name must be at least 1 character long
 					</span>
@@ -25,7 +25,7 @@
 				</div>
 				<div class="form-group">
 					<label for="email">Email Address</label>
-					<input class="form-control" placeholder="Please enter your email address" type="email"  name="email" required>
+					<input class="form-control" placeholder="Please enter your email address" type="email"  name="email" required ng-model="signing.email">
 					<span ng-if="registration.email.$invalid && registration.email.$touched">
 						Must be a valid email address: handle@domain format
 					</span>
@@ -33,7 +33,7 @@
 				
 				<div class="form-group">
 					<label for="phone">Phone Number</label>
-					<input class="form-control" placeholder="Please enter your phone number" type="text" name="phone"  pattern="(\d{3})-(\d{3})-(\d{4})">
+					<input class="form-control" placeholder="Please enter your phone number" type="text" name="phone"  pattern="(\d{3})-(\d{3})-(\d{4})" ng-model="signing.phone">
 					<span ng-if="registration.phone.$invalid && registration.phone.$touched">
 						Phone must be in the format ###-###-####.
 					</span>

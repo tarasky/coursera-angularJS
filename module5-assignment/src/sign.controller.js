@@ -1,12 +1,11 @@
 (function () {
 
-angular.module('signup')
-.controller('MenuController', MenuController);
+angular.module('public')
+.controller('SignController', SignController);
 
-MenuController.$inject = ['menuCategories'];
-function MenuController(menuCategories) {
-  var $ctrl = this;
-  $ctrl.menuCategories = menuCategories;
+function SignController(menuCategories) {
+  var signing = this;
+  
 }
 
 
