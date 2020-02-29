@@ -13,7 +13,7 @@ function SignController(MenuService) {
 		.then(function(response){
 			
 			if(response.data){
-				MenuService.saveInfo(signing.user);
+				MenuService.saveInfo(signing.user, response.data);
 				signing.message = "Your information has been saved";
 			}else{
 				signing.message = "No such menu number exists";

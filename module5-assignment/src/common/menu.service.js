@@ -39,7 +39,8 @@ function MenuService($http, ApiPath) {
 		return response;
 	};
 	
-	service.saveInfo = function(userArr){
+	service.saveInfo = function(userArr, detailsOfDish){
+		console.log(detailsOfDish);
 		myuser = [{firstname: userArr.firstname},{lastname: userArr.lastname},{email: userArr.email},{phone: userArr.phone},{dish: userArr.dish}];
 	}
 	
