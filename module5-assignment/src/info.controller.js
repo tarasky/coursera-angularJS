@@ -12,8 +12,8 @@ function InfoController(user,ApiPath) {
 	if(!user.length){
 		info.error = true;
 	}else{
-		info.userInfo = user;
-		console.log(info.userInfo);
+		info.userInfo = user[0];
+		info.dishInfo = user[1];
 	}
 
 }
