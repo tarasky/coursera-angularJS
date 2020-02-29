@@ -9,17 +9,21 @@
 		
 			<div ng-if="info.userInfo">
 			
-				{{info.userInfo}}
-			
-				FirstName : {{firstname}}
+				FirstName : {{info.userInfo.firstname}}
 				<br/><br/>
-				LastName : {{lastname}}
+				LastName : {{info.userInfo.lastname}}
 				<br/><br/>
-				Email : {{email}}
+				Email : {{info.userInfo.email}}
 				<br/><br/>
-				Phone : {{phone}}
+				Phone : {{info.userInfo.phone}}
 				<br/><br/>
-				Favourite Dish : {{dish}}
+				Favourite Dish : {{info.userInfo.dish}}
+				<br/>
+				<img class="img-responsive" ng-src="{{info.basePath}}/images/{{info.userInfo.dish}}.jpg" alt="{{info.userInfo.dish}}">
+				<br />
+				{{info.userInfo.dishName}}
+				<br />
+				{{info.userInfo.dishDesc}}
 			</div>
 			
 			
