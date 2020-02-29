@@ -13,6 +13,7 @@ function InfoController(user,ApiPath) {
 		info.error = true;
 	}else{
 		info.userInfo = user;
+		console.log(info.userInfo);
 	}
 
 }
