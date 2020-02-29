@@ -5,10 +5,14 @@ angular.module('public')
 
 InfoController.$inject = ['user'];
 function InfoController(user) {
-  var info = this;
-  info.userInfo = user;
-  
-  console.log(user);
+	var info = this;
+	
+	if(!user.length){
+		info.error = "Not Signed Up Yet. Sign up Now!";
+	}else{
+		info.userInfo = user;
+	}
+	console.log(user);
 }
 
 })();
