@@ -3,13 +3,14 @@
 angular.module('public')
 .controller('SignController', SignController);
 
-function SignController(menuCategories) {
-  var signing = this;
+SignController.$inject = ['MenuService'];
+function SignController(MenuService) {
+	var signing = this;
   
-  signing.submit = function () {
-    console.log(signing.firstname);
-	
-  };
+	signing.submit = function () {
+		console.log("hello");
+		
+	};
   
 }
 
