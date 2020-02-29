@@ -43,9 +43,9 @@
 					<input class="form-control" placeholder="Please enter your favourite menu number" type="text" name="dish" ng-model="signing.user.dish">
 				</div>
 				
-				<!--<button ng-disabled="registration.$invalid" ng-click="signing.submit()">Submit</button>-->
+				<button ng-disabled="registration.$invalid" class="btn btn-primary" ng-click="signing.submit()">Submit</button>
 				
-				<button class="btn btn-default" ng-click="signing.submit()">Submit</button>
+				<div>{{signing.message}}</div>
 		
 			</form>
 		</div>
