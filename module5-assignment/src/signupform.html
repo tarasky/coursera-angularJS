@@ -1,12 +1,43 @@
 <h2>Sign Up For Our Newsletter Now!!!</h2>
 
 <form name='registration' novalidate>
-	First Name : <input placeholder="Please enter your first name" type="text"></br></br>
-	Last Name : <input placeholder="Please enter your last name" type="text"></br></br>
-	Email Address : <input placeholder="Please enter your email address" type="text"></br></br>
-	Phone Number : <input placeholder="Please enter your phone number" type="text"></br></br>
-	Favourite Dish : <input placeholder="Please enter your favourite menu number" type="text"></br></br>
-	<button type="submit">Submit</button>
+	First Name : <input placeholder="Please enter your first name" type="text" name="firstname" required minlength="1" ng-maxlength="20">
+	<span
+		ng-if="(registration.firstname.$error.minlength || registration.firstname.$error.required) && registration.firstname.$touched">
+		First Name must be at least 1 character long
+	</span>
+	<span ng-if="registration.firstname.$error.maxlength && registration.firstname.$touched">
+		First Name must not be longer than 20 characters
+	</span>
+	</br></br>
+	
+	Last Name : <input placeholder="Please enter your last name" type="text" name="lastname" required minlength="1" ng-maxlength="20">
+	<span
+		ng-if="(registration.lastname.$error.minlength || registration.lastname.$error.required) && registration.lastname.$touched">
+		Last Name must be at least 1 character long
+	</span>
+	<span ng-if="registration.lastname.$error.maxlength && registration.lastname.$touched">
+		Last Name must not be longer than 20 characters
+	</span>
+	</br></br>
+	
+	Email Address : <input placeholder="Please enter your email address" type="email"  name="email" required>
+	<span ng-if="registration.email.$invalid && registration.email.$touched">
+		Must be a valid email address: handle@domain format
+	</span>
+	</br></br>
+	
+	Phone Number : <input placeholder="Please enter your phone number" type="text" name="phone"  pattern="(\d{3})-(\d{3})-(\d{4})">
+	<span ng-if="registration.phone.$invalid && registration.phone.$touched">
+		Phone must be in the format ###-###-####.
+	</span>
+	</br></br>
+	
+	Favourite Dish : <input placeholder="Please enter your favourite menu number" type="text">
+	</br></br>
+	
+	<button ng-disabled="registration.$invalid">Submit</button>
+	
 </form>
 
     <!--<fieldset>
