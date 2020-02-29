@@ -8,7 +8,9 @@ function SignController(MenuService) {
 	var signing = this;
   
 	signing.submit = function () {
-		console.log(signing.user);
+		
+		var message = MenuService.getDish(signing.user.dish);
+		console.log(message);
 		
 	};
   
