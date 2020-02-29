@@ -11,6 +11,7 @@ function InfoController(user) {
 		info.error = true;
 	}else{
 		info.userInfo = user;
+		console.log(info.userInfo);
 	}
 
 }
